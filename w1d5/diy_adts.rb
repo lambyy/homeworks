@@ -17,6 +17,21 @@ class Stack
   end
 end
 
-# To test that your code works, create a new instance of the Stack class,
-# and play around with adding and removing elements. Remember, a stack
-# follows the principle of LIFO!
+class Queue
+  def initialize
+    @queue = []
+  end
+
+  def enqueue(el)
+      @queue.push(el)
+      el
+  end
+
+  def dequeue
+    @queue.shift
+  end
+
+  def show
+    @queue
+  end
+end
