@@ -17,16 +17,15 @@ class Board
   end
 
   def valid_move?(start_pos)
-    raise "Invalid starting cup" if start_pos < 0 || start_pos > 13
+    raise "Invalid starting cup" if start_pos < 0 || start_pos > 12
     raise "Invalid starting cup" if @cups[start_pos].empty?
   end
 
   def make_move(start_pos, current_player_name)
-    # debugger
     holding = @cups[start_pos]
     @cups[start_pos] = []
     pos = start_pos
-    until holding.length.zero?
+    until holding.empty?
       pos += 1
       pos = 0 if pos > 13
       if current_player_name == @player1
@@ -58,8 +57,8 @@ class Board
   end
 
   def one_side_empty?
-    side_one_empty = (0..5).all? { |cup| @cups[cup].length.zero? }
-    side_two_empty = (7..12).all? { |cup| @cups[cup].length.zero? }
+    side_one_empty = (0..5).all? { |cup| @cups[cup].empty? }
+    side_two_empty = (7..12).all? { |cup| @cups[cup].empty? }
     side_one_empty || side_two_empty
   end
 
