@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "webpack": "webpack"
+=======
+    "webpack": "webpack",
+    "watch": "webpack -w"
+>>>>>>> 05fdfced5ebfc461afce7f76f97e4d95451ff1bd
   },
   "keywords": [],
   "author": "",
